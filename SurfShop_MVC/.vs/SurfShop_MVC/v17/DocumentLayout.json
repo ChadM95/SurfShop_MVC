@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3102A3F3-9B78-4E8A-8540-E629A9E22370}|SurfShop_MVC\\SurfShop_MVC.csproj|c:\\users\\auser\\documents\\chad\\repos\\surfshop_mvc\\surfshop_mvc\\surfshop_mvc\\surfshop_mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3102A3F3-9B78-4E8A-8540-E629A9E22370}|SurfShop_MVC\\SurfShop_MVC.csproj|solutionrelative:surfshop_mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SurfShop_MVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SurfShop_MVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAswB8AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-22T19:15:44.722Z",
+              "EditorCaption": ""
             }
           ]
         }
