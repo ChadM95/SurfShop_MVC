@@ -4,68 +4,57 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+
+    <!--Bootstrap library-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-   
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
 
     <div class="p-4 bg-primary text-white text-center">
-        <h1>Rad Chad's Surf Shop</h1>    
+        <h1>MVC's Surf Shop</h1>
     </div>
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item ml-5">
-                    <a class="nav-link active mx-4" href="#">About</a>
+            <ul class="nav nav-pills mx-auto">
+                <li class="nav-item">
+                    @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link mx-3" })
                 </li>
-                <li class="nav-item ml-5">
-                    <a class="nav-link active mx-4" href="#">Shop</a>
+                <li class="nav-item dropdown">
+                    @Html.ActionLink("Shop", "Index", "Home", null, new { @class = "nav-link dropdown-toggle mx-3", id = "navbarDropdown",
+                   style = "background-color: transparent",
+                   role = "button", data_toggle = "dropdown", })
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        @Html.ActionLink("Customer", "Shop", "Shop", null, new { @class = "nav-link " })
+                        @Html.ActionLink("Admin", "ShopAdmin", "Shop", null, new { @class = "nav-link" })
+                    </div>
                 </li>
-                <li class="nav-item ml-5">
-                    <a class="nav-link active mx-4" href="#">Rent</a>
+                <li class="nav-item">
+                    @Html.ActionLink("Rent", "Rent", "Rent", null, new { @class = "nav-link mx-3" })
                 </li>
-                <li class="nav-item ml-5">
-                    <a class="nav-link active mx-4" href="#">Surf</a>
+                <li class="nav-item">
+                    @Html.ActionLink("Surf", "Surf", "Surf", null, new { @class = "nav-link mx-3" })
                 </li>
-                <li class="nav-item ml-5">
-                    <a class="nav-link active mx-4" href="#">Contact</a>
+                <li class="nav-item">
+                    @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link mx-3" })
                 </li>
             </ul>
         </div>
     </nav>
 
+   
+
     <div class="container body-content">
 
         @RenderBody()
-        <p class="container my-5">
-            Building a full-stack ASP.NET MVC application for a fictional surf shop sounds like a fun project! Here's a high-level overview of how you might approach it:
 
-            Frontend (ASP.NET MVC Views with HTML, CSS, and JavaScript):
-            Homepage: Design an attractive homepage that showcases the surf shop's products, promotions, and maybe some featured items. Use HTML, CSS, and JavaScript to create an engaging user experience.
-            Product Listings: Create views to display different categories of surf products (e.g., surfboards, wetsuits, accessories). Each product should have a thumbnail image, name, description, and price.
-            Product Details: Implement pages where users can view detailed information about individual products, such as specifications, sizes, colors, and customer reviews.
-            Shopping Cart: Develop functionality to allow users to add products to their shopping cart, view the cart contents, update quantities, and proceed to checkout.
-            User Authentication: Implement user authentication and authorization to allow users to sign up, log in, and manage their profiles. You can use ASP.NET Identity for this.
-            Admin Panel: Create an admin panel where shop administrators can manage products, categories, orders, and user accounts.
-            Backend (ASP.NET MVC Controllers and Models):
-            Models: Define models for your surf shop entities such as products, categories, users, and orders. Use Entity Framework to interact with the database.
-            Controllers: Create controllers to handle user requests, retrieve data from the models, and render views. Implement actions for functionalities like product listing, product details, shopping cart, and user authentication.
-            Data Access Layer: Implement a data access layer using Entity Framework to interact with the database. Define database contexts, repositories, and migrations for managing database schema changes.
-            Business Logic: Implement business logic within your controllers or service classes to handle operations such as adding products to the cart, calculating order totals, and processing payments.
-            Authentication and Authorization: Configure authentication middleware to secure your application and authorize access to certain resources based on user roles.
-            Additional Features:
-            Search Functionality: Implement search functionality to allow users to easily find products based on keywords or categories.
-            Responsive Design: Ensure that your application is mobile-friendly and adapts well to different screen sizes and devices.
-            Payment Integration: Integrate a payment gateway (e.g., Stripe, PayPal) to enable users to make secure online payments.
-            Reviews and Ratings: Allow users to leave reviews and ratings for products, and display them on the product detail pages.
-            Email Notifications: Send email notifications to users for order confirmation, shipment tracking, and other important updates.
-            Localization: Support multiple languages and currencies to cater to a diverse user base.
-            By following these guidelines, you can create a comprehensive ASP.NET MVC application for your fictional surf shop, providing an immersive experience for both customers and administrators.
-        </p>
-        
-        <hr/>
+        <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Rad Chad Industries</p>
         </footer>

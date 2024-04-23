@@ -13,5 +13,10 @@ namespace SurfShop_MVC.Controllers
         {
             return View();
         }
+
+        public ActionResult ShopAdmin()
+        {
+            return View();
+        }
     }
 }
