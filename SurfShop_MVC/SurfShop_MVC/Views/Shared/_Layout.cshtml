@@ -28,11 +28,10 @@
                 </li>
                 <li class="nav-item dropdown">
                     @Html.ActionLink("Shop", "Index", "Home", null, new { @class = "nav-link dropdown-toggle mx-3", id = "navbarDropdown",
-                   style = "background-color: transparent",
-                   role = "button", data_toggle = "dropdown", })
+                   style = "background-color: transparent", role = "button", data_toggle = "dropdown", })
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        @Html.ActionLink("Customer", "Shop", "Shop", null, new { @class = "nav-link " })
-                        @Html.ActionLink("Admin", "ShopAdmin", "Shop", null, new { @class = "nav-link" })
+                        @Html.ActionLink("Customer", "Index", "Products", null, new { @class = "nav-link " })
+                        @Html.ActionLink("Admin", "Index", "Products", null, new { @class = "nav-link" })
                     </div>
                 </li>
                 <li class="nav-item">
