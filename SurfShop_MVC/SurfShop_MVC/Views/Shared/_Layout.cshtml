@@ -1,53 +1,81 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title</title>
-
-    <!--Bootstrap library-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 
 <body>
 
-    <div class="p-4 bg-primary text-white text-center">
-        <h1>MVC's Surf Shop</h1>
-    </div>
-
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-dark">
         <div class="container-fluid">
-            <ul class="nav nav-pills mx-auto">
-                <li class="nav-item">
-                    @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link mx-3" })
+            <ul class="navbar-nav">
+
+                <li class="nav-item  mx-2 my-auto">
+                    <a class="navbar-brand" href="#">
+                        <img class="rounded-circle" style="width:80px" src="data:image/png;base64,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" />
+                    </a>
                 </li>
-                <li class="nav-item dropdown">
-                    @Html.ActionLink("Shop", "Index", "Home", null, new { @class = "nav-link dropdown-toggle mx-3", id = "navbarDropdown",
-                   style = "background-color: transparent", role = "button", data_toggle = "dropdown", })
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        @Html.ActionLink("Customer", "Index", "Products", null, new { @class = "nav-link " })
-                        @Html.ActionLink("Admin", "Index", "Products", null, new { @class = "nav-link" })
-                    </div>
+
+                <li class="nav-item my-auto">
+                    <h4 class="nav-link text-white mx-4" style="font-size:28px;">MVC Surf Shop</h4>
                 </li>
-                <li class="nav-item">
-                    @Html.ActionLink("Rent", "Rent", "Rent", null, new { @class = "nav-link mx-3" })
+
+                <li class="nav-item my-auto">
+                    @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link text-white mx-2" })
                 </li>
-                <li class="nav-item">
-                    @Html.ActionLink("Surf", "Surf", "Surf", null, new { @class = "nav-link mx-3" })
+
+                <li class="nav-item my-auto mx-2" style="color: grey; font-size:x-large; margin-top: 10px;">&vert;</li>
+
+                
+                <div class="my-auto mx-2 dropdown">
+
+                    <button type="button" class="btn" data-bs-toggle="dropdown">
+
+                        @Html.ActionLink("Shop", "Index", "Home", null, new
+                        {
+                            @class = "nav-link dropdown-toggle text-white mx-2",
+                            id = "navbarDropdown",
+                        style = "background-color: transparent",
+                            role = "button",
+                            data_toggle = "dropdown",
+                        })
+
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>@Html.ActionLink("Customer", "Index", "Products", null, new { @class = "dropdown-item" })</li>
+                        <li>@Html.ActionLink("Admin", "Index", "Products", null, new { @class = "dropdown-item" })</li>
+                    </ul>
+
+                </div>
+                
+
+                <li class="nav-item my-auto mx-2" style="color: grey; font-size:x-large; margin-top: 10px;">&vert;</li>
+
+                <li class="nav-item my-auto mx-2">
+                    @Html.ActionLink("Rent", "Rent", "Rent", null, new { @class = "nav-link text-white mx-2" })
                 </li>
-                <li class="nav-item">
-                    @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link mx-3" })
+
+                <li class="nav-item my-auto mx-2" style="color: grey; font-size:x-large; margin-top: 10px;">&vert;</li>
+
+                <li class="nav-item my-auto mx-2">
+                    @Html.ActionLink("Surf", "Surf", "Surf", null, new { @class = "nav-link text-white mx-2" })
+                </li>
+
+                <li class="nav-item my-auto mx-2" style="color: grey; font-size:x-large; margin-top: 10px;">&vert;</li>
+
+                <li class="nav-item my-auto mx-2">
+                    @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link text-white mx-2" })
                 </li>
             </ul>
         </div>
     </nav>
 
-   
+    <hr>
 
     <div class="container body-content">
 
@@ -58,6 +86,6 @@
             <p>&copy; @DateTime.Now.Year - Rad Chad Industries</p>
         </footer>
     </div>
-
 </body>
+
 </html>
