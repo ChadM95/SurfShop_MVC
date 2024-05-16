@@ -1,15 +1,12 @@
 ﻿@model IEnumerable<SurfShop_MVC.Models.Product>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "ViewOnly";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>ViewOnly</h2>
 
-<p>
-        @Html.ActionLink("Create New", "Create", null, new {@class = "btn btn-primary"})
-</p>
 <table class="table">
     <tr>
         <th>
@@ -42,8 +39,7 @@
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Product_ID }, new {@class = "btn btn-success"})
-            @Html.ActionLink("Delete", "Delete", new { id=item.Product_ID }, new { @class = "btn btn-warning" })
+            <button class="btn btn-primary"><a class="text-white" style="text-decoration:none" href="https://paypal.me/ChadM95?country.x=IE&locale.x=en_US">Buy It Now!</a></button>
         </td>
     </tr>
 }
