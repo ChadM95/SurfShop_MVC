@@ -20,6 +20,12 @@ namespace SurfShop_MVC.Controllers
             return View(db.Products.ToList());
         }
 
+        //Products VIEW ONLY
+        public ActionResult ViewOnly()
+        {
+            return View(db.Products.ToList());
+        }
+
         // GET: Products/Details/5
         public ActionResult Details(int? id)
         {
