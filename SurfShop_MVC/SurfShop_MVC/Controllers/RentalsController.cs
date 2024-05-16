@@ -20,21 +20,6 @@ namespace SurfShop_MVC.Controllers
             return View(db.Rentals.ToList());
         }
 
-        // GET: Rentals/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Rental rental = db.Rentals.Find(id);
-            if (rental == null)
-            {
-                return HttpNotFound();
-            }
-            return View(rental);
-        }
-
         // GET: Rentals/Create
         public ActionResult Create()
         {

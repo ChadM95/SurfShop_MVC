@@ -79,16 +79,18 @@
         </div>
     </nav>
 
-    <hr>
-
     <div class="container body-content">
 
         @RenderBody()
 
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Rad Chad Industries</p>
-        </footer>
+
+        <div class="fixed-bottom">
+            <hr /
+            <footer>
+                <p style="margin-left:15px;">&copy; @DateTime.Now.Year - Rad Chad Industries</p>
+            </footer>
+        </div>
+
     </div>
 </body>
 
