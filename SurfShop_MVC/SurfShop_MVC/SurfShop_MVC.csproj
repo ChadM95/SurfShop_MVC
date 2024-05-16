@@ -131,7 +131,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
-    <Compile Include="Controllers\RentController.cs" />
+    <Compile Include="Controllers\RentalsController.cs" />
     <Compile Include="Controllers\SurfController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -164,8 +164,8 @@
     <Content Include="Global.asax" />
     <Content Include="Models\SurfShopDB_Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SurfShopDB_Model.Context.cs</LastGenOutput>
       <DependentUpon>SurfShopDB_Model.edmx</DependentUpon>
+      <LastGenOutput>SurfShopDB_Model.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\SurfShopDB_Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -209,14 +209,17 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Rent\Rent.cshtml" />
     <Content Include="Views\Surf\Surf.cshtml" />
+    <Content Include="Views\Rentals\Create.cshtml" />
+    <Content Include="Views\Rentals\Delete.cshtml" />
+    <Content Include="Views\Rentals\Details.cshtml" />
+    <Content Include="Views\Rentals\Edit.cshtml" />
+    <Content Include="Views\Rentals\Index.cshtml" />
     <Content Include="Views\Products\Create.cshtml" />
     <Content Include="Views\Products\Delete.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
-    <Content Include="Views\Products\ViewOnly.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

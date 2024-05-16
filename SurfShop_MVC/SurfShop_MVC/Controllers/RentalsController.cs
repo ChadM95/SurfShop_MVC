@@ -10,107 +10,107 @@ using SurfShop_MVC.Models;
 
 namespace SurfShop_MVC.Controllers
 {
-    public class ProductsController : Controller
+    public class RentalsController : Controller
     {
         private SurfShopDBEntitiesConString db = new SurfShopDBEntitiesConString();
 
-        // GET: Products
+        // GET: Rentals
         public ActionResult Index()
         {
-            return View(db.Products.ToList());
+            return View(db.Rentals.ToList());
         }
 
-        // GET: Products/Details/5
+        // GET: Rentals/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Products.Find(id);
-            if (product == null)
+            Rental rental = db.Rentals.Find(id);
+            if (rental == null)
             {
                 return HttpNotFound();
             }
-            return View(product);
+            return View(rental);
         }
 
-        // GET: Products/Create
+        // GET: Rentals/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Products/Create
+        // POST: Rentals/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Product_ID,Product_Name,Product_Description,Image,Price")] Product product)
+        public ActionResult Create([Bind(Include = "Rental_ID,Customer_Name,Rental_Date,Return_Date,Price")] Rental rental)
         {
             if (ModelState.IsValid)
             {
-                db.Products.Add(product);
+                db.Rentals.Add(rental);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(product);
+            return View(rental);
         }
 
-        // GET: Products/Edit/5
+        // GET: Rentals/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Products.Find(id);
-            if (product == null)
+            Rental rental = db.Rentals.Find(id);
+            if (rental == null)
             {
                 return HttpNotFound();
             }
-            return View(product);
+            return View(rental);
         }
 
-        // POST: Products/Edit/5
+        // POST: Rentals/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Product_ID,Product_Name,Product_Description,Image,Price")] Product product)
+        public ActionResult Edit([Bind(Include = "Rental_ID,Customer_Name,Rental_Date,Return_Date,Price")] Rental rental)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(product).State = EntityState.Modified;
+                db.Entry(rental).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(product);
+            return View(rental);
         }
 
-        // GET: Products/Delete/5
+        // GET: Rentals/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Products.Find(id);
-            if (product == null)
+            Rental rental = db.Rentals.Find(id);
+            if (rental == null)
             {
                 return HttpNotFound();
             }
-            return View(product);
+            return View(rental);
         }
 
-        // POST: Products/Delete/5
+        // POST: Rentals/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Product product = db.Products.Find(id);
-            db.Products.Remove(product);
+            Rental rental = db.Rentals.Find(id);
+            db.Rentals.Remove(rental);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

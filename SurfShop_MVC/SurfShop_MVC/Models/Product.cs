@@ -17,6 +17,7 @@ namespace SurfShop_MVC.Models
         public int Product_ID { get; set; }
         public string Product_Name { get; set; }
         public string Product_Description { get; set; }
-        public decimal Price { get; set; }
+        public byte[] Image { get; set; }
+        public Nullable<decimal> Price { get; set; }
     }
 }

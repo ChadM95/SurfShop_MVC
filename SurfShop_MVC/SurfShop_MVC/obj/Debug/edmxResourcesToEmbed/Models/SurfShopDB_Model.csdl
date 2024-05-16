@@ -4,26 +4,23 @@
     <Key>
       <PropertyRef Name="Product_ID" />
     </Key>
-    <Property Name="Product_ID" Type="Int32" Nullable="false" />
-    <Property Name="Product_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Product_Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Product_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Product_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product_Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
   </EntityType>
   <EntityType Name="Rental">
     <Key>
       <PropertyRef Name="Rental_ID" />
-      <PropertyRef Name="Customer_Name" />
-      <PropertyRef Name="Rental_Date" />
-      <PropertyRef Name="Due_Date" />
-      <PropertyRef Name="Price" />
     </Key>
-    <Property Name="Rental_ID" Type="Int32" Nullable="false" />
-    <Property Name="Customer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Rental_Date" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="Due_Date" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Rental_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Customer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Rental_Date" Type="DateTime" Precision="0" />
+    <Property Name="Return_Date" Type="DateTime" Precision="0" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
   </EntityType>
-  <EntityContainer Name="SurfShopDBEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="SurfShopDBEntitiesConString" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Products" EntityType="Self.Product" />
     <EntitySet Name="Rentals" EntityType="Self.Rental" />
   </EntityContainer>

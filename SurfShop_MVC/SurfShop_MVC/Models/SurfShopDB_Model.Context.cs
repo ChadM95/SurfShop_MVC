@@ -13,10 +13,10 @@ namespace SurfShop_MVC.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SurfShopDBEntities : DbContext
+    public partial class SurfShopDBEntitiesConString : DbContext
     {
-        public SurfShopDBEntities()
-            : base("name=SurfShopDBEntities")
+        public SurfShopDBEntitiesConString()
+            : base("name=SurfShopDBEntitiesConString")
         {
         }
     

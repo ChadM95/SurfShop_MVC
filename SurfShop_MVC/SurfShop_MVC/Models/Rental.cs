@@ -16,8 +16,8 @@ namespace SurfShop_MVC.Models
     {
         public int Rental_ID { get; set; }
         public string Customer_Name { get; set; }
-        public System.DateTime Rental_Date { get; set; }
-        public System.DateTime Due_Date { get; set; }
-        public int Price { get; set; }
+        public Nullable<System.DateTime> Rental_Date { get; set; }
+        public Nullable<System.DateTime> Return_Date { get; set; }
+        public Nullable<decimal> Price { get; set; }
     }
 }

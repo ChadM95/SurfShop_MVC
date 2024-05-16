@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="SurfShopDBModelStoreContainer" CdmEntityContainer="SurfShopDBEntities">
+  <EntityContainerMapping StorageEntityContainer="SurfShopDBModelStoreContainer" CdmEntityContainer="SurfShopDBEntitiesConString">
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="SurfShopDBModel.Product">
         <MappingFragment StoreEntitySet="Products">
           <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
           <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
           <ScalarProperty Name="Product_Description" ColumnName="Product_Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
           <ScalarProperty Name="Price" ColumnName="Price" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -17,7 +18,7 @@
           <ScalarProperty Name="Rental_ID" ColumnName="Rental_ID" />
           <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
           <ScalarProperty Name="Rental_Date" ColumnName="Rental_Date" />
-          <ScalarProperty Name="Due_Date" ColumnName="Due_Date" />
+          <ScalarProperty Name="Return_Date" ColumnName="Return_Date" />
           <ScalarProperty Name="Price" ColumnName="Price" />
         </MappingFragment>
       </EntityTypeMapping>
