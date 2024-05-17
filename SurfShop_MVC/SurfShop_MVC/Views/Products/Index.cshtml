@@ -36,7 +36,19 @@
             @Html.DisplayFor(modelItem => item.Product_Description)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Image)
+            
+            @if(item.Image != null)
+            {
+                //convert the binary to base64 string
+                var imageAsBase64 = Convert.ToBase64String(item.Image);
+
+                //convert the string to image
+                var convertedImage = String.Format($"data:Image/png;Base64,{imageAsBase64}");
+
+                //place inside image html element
+                <img src="@convertedImage">
+            }
+
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)
