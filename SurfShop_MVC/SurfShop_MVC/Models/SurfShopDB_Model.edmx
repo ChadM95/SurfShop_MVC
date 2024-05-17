@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SurfShopDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SurfShopDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Products">
           <Key>
             <PropertyRef Name="Product_ID" />
@@ -24,13 +24,14 @@
           <Property Name="Rental_Date" Type="date" />
           <Property Name="Return_Date" Type="date" />
           <Property Name="Price" Type="money" />
+          <Property Name="NoOfWetsuits" Type="int" />
+          <Property Name="NoOfBoards" Type="int" />
         </EntityType>
         <EntityContainer Name="SurfShopDBModelStoreContainer">
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rentals" EntityType="Self.Rentals" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SurfShopDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -53,6 +54,8 @@
           <Property Name="Rental_Date" Type="DateTime" Precision="0" />
           <Property Name="Return_Date" Type="DateTime" Precision="0" />
           <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="NoOfWetsuits" Type="Int32" />
+          <Property Name="NoOfBoards" Type="Int32" />
         </EntityType>
         <EntityContainer Name="SurfShopDBEntitiesConString" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Products" EntityType="Self.Product" />
@@ -78,6 +81,8 @@
           <EntitySetMapping Name="Rentals">
             <EntityTypeMapping TypeName="SurfShopDBModel.Rental">
               <MappingFragment StoreEntitySet="Rentals">
+                <ScalarProperty Name="NoOfBoards" ColumnName="NoOfBoards" />
+                <ScalarProperty Name="NoOfWetsuits" ColumnName="NoOfWetsuits" />
                 <ScalarProperty Name="Rental_ID" ColumnName="Rental_ID" />
                 <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
                 <ScalarProperty Name="Rental_Date" ColumnName="Rental_Date" />

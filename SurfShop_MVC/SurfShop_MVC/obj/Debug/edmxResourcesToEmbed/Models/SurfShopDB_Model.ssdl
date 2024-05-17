@@ -19,6 +19,8 @@
     <Property Name="Rental_Date" Type="date" />
     <Property Name="Return_Date" Type="date" />
     <Property Name="Price" Type="money" />
+    <Property Name="NoOfWetsuits" Type="int" />
+    <Property Name="NoOfBoards" Type="int" />
   </EntityType>
   <EntityContainer Name="SurfShopDBModelStoreContainer">
     <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />

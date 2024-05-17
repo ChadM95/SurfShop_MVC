@@ -160,6 +160,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\air.jpg" />
+    <Content Include="Content\kilmore.jpg" />
+    <Content Include="Content\mountains.jpg" />
+    <Content Include="Content\shop.jpg" />
+    <Content Include="Content\shop1.jfif" />
+    <Content Include="Content\sup.jpg" />
+    <Content Include="Content\tullan.jpg" />
+    <Content Include="Content\tullan1.jpg" />
+    <Content Include="Content\tullan3.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Models\SurfShopDB_Model.Context.tt">
@@ -223,7 +232,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
     @RenderSection("scripts", required:false)
+    @RenderSection("styles", required:false)
 
 </head>
 
@@ -84,10 +85,10 @@
         @RenderBody()
 
 
-        <div class="fixed-bottom">
+        <div>
             <hr /
             <footer>
-                <p style="margin-left:15px;">&copy; @DateTime.Now.Year - Rad Chad Industries</p>
+                <p class="float-end" style="margin-left:15px;">&copy; @DateTime.Now.Year - Rad Chad Industries</p>
             </footer>
         </div>
 
