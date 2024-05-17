@@ -37,10 +37,19 @@ namespace SurfShop_MVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Product_ID,Product_Name,Product_Description,Image,Price")] Product product)
+        public ActionResult Create([Bind(Include = "Product_ID,Product_Name,Product_Description,Price")] Product product, HttpPostedFileBase productImagePicker)
         {
             if (ModelState.IsValid)
             {
+                if (productImagePicker != null)
+                {
+                    //create new array of bytes
+                    product.Image = new byte[productImagePicker.ContentLength];
+
+                    //populate the array with the image
+                    productImagePicker.InputStream.Read(product.Image, 0, productImagePicker.ContentLength);
+                }
+
                 db.Products.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -69,10 +78,19 @@ namespace SurfShop_MVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Product_ID,Product_Name,Product_Description,Image,Price")] Product product)
+        public ActionResult Edit([Bind(Include = "Product_ID,Product_Name,Product_Description,Price")] Product product, HttpPostedFileBase productImagePicker)
         {
             if (ModelState.IsValid)
             {
+                if (productImagePicker != null)
+                {
+                    //create new array of bytes
+                    product.Image = new byte[productImagePicker.ContentLength];
+
+                    //populate the array with the image
+                    productImagePicker.InputStream.Read(product.Image, 0, productImagePicker.ContentLength);
+                }
+
                 db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
