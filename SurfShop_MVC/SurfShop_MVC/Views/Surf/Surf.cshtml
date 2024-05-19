@@ -4,5 +4,47 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Surf</h2>
+@model List<SurfShop_MVC.SurfSpot>
 
+@{
+    var surfSpots = ViewBag.InfoFromApi as List<SurfShop_MVC.SurfSpot>;
+}
+
+<h2>Surf Spots</h2>
+<p>On this page you will find some local surf spots and their ideal conditions.<br/>
+    Use the embedded Windguru surf forecast widget to decide where to go... </p>
+<hr />
+
+<div class="container mt-4">
+    <div class="row">
+        @foreach (var spot in surfSpots)
+        {
+            //convert base64 Image string
+            string imageDataUrl = $"data:image/png;base64,{spot.Image}";
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="@imageDataUrl" class="card-img-top" alt="surfSpotImg" style="width:auto;max-height:200px" /> 
+                        <h5 class="card-title">@spot.Name</h5>
+                        <p class="card-text">Description: @spot.Description</p>
+                        <p class="card-text">Ideal Conditions : @spot.IdealConditions</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script id="wg_fwdg_103244_100_1716070276444">
+(function (window, document) {
+  var loader = function () {
+    var arg = ["s=103244" ,"m=100","uid=wg_fwdg_103244_100_1716070276444" ,"wj=knots" ,"tj=c" ,"waj=m" ,"tij=cm" ,"odh=0" ,"doh=24" ,"fhours=240" ,"hrsm=2" ,"vt=forecasts" ,"lng=en" ,"idbs=1" ,"p=WINDSPD,GUST,SMER,TMPE,FLHGT,CDC,APCP1s,RATING"];
+    var script = document.createElement("script");
+    var tag = document.getElementsByTagName("script")[0];
+    script.src = "https://www.windguru.cz/js/widget.php?"+(arg.join("&"));
+    tag.parentNode.insertBefore(script, tag);
+  };
+  window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+})(window, document);
+</script>

@@ -1,0 +1,118 @@
+﻿@model SurfShop_MVC.Models.Rental
+
+@{
+    ViewBag.Title = "ViewOnly";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts {
+    <script>
+        $(function () {
+            $('#rentalDate').datepicker({
+                format: 'yyyy-mm-dd', // Set the date format
+                autoclose: true // Close the datepicker when a date is selected
+            });
+        });
+        $(function () {
+            $('#returnDate').datepicker({
+                format: 'yyyy-mm-dd', // Set the date format
+                autoclose: true // Close the datepicker when a date is selected
+            });
+        });
+
+    </script>
+}
+
+
+<h2 class="mt-4">Book Your Rental Here!</h2>
+<div class="row">
+    <div class="col">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Customer_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Customer_Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Customer_Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <!---->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NoOfBoards, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NoOfBoards, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.NoOfBoards, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NoOfWetsuits, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NoOfWetsuits, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.NoOfWetsuits, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Rental_Date, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input type="text" id="rentalDate" name="Rental_Date" class="form-control" />
+                        @Html.ValidationMessageFor(model => model.Rental_Date, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Return_Date, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input type="text" id="returnDate" name="Return_Date" class="form-control" />
+                        @Html.ValidationMessageFor(model => model.Return_Date, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-primary my-3" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </div>
+
+    <div class="col mt-5">
+        <h5>Price List</h5>
+
+        <table class="table mt-3">
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Surfboard</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Wetsuit</td>
+                <td>10</td>
+            </tr>
+        </table>
+
+    </div>
+
+</div>

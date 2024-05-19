@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3102A3F3-9B78-4E8A-8540-E629A9E22370}|SurfShop_MVC\\SurfShop_MVC.csproj|c:\\users\\auser\\documents\\chad\\repos\\surfshop_mvc\\surfshop_mvc\\surfshop_mvc\\surfshop_mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3102A3F3-9B78-4E8A-8540-E629A9E22370}|SurfShop_MVC\\SurfShop_MVC.csproj|solutionrelative:surfshop_mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3102A3F3-9B78-4E8A-8540-E629A9E22370}|SurfShop_MVC\\SurfShop_MVC.csproj|c:\\users\\auser\\documents\\chad\\repos\\surfshop_mvc\\surfshop_mvc\\surfshop_mvc\\surfshop_mvc\\views\\rentals\\bookingsuccessful.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3102A3F3-9B78-4E8A-8540-E629A9E22370}|SurfShop_MVC\\SurfShop_MVC.csproj|solutionrelative:surfshop_mvc\\views\\rentals\\bookingsuccessful.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3102A3F3-9B78-4E8A-8540-E629A9E22370}|SurfShop_MVC\\SurfShop_MVC.csproj|c:\\users\\auser\\documents\\chad\\repos\\surfshop_mvc\\surfshop_mvc\\surfshop_mvc\\surfshop_mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3102A3F3-9B78-4E8A-8540-E629A9E22370}|SurfShop_MVC\\SurfShop_MVC.csproj|solutionrelative:surfshop_mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3102A3F3-9B78-4E8A-8540-E629A9E22370}|SurfShop_MVC\\SurfShop_MVC.csproj|c:\\users\\auser\\documents\\chad\\repos\\surfshop_mvc\\surfshop_mvc\\surfshop_mvc\\surfshop_mvc\\views\\rentals\\viewonly.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3102A3F3-9B78-4E8A-8540-E629A9E22370}|SurfShop_MVC\\SurfShop_MVC.csproj|solutionrelative:surfshop_mvc\\views\\rentals\\viewonly.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3102A3F3-9B78-4E8A-8540-E629A9E22370}|SurfShop_MVC\\SurfShop_MVC.csproj|c:\\users\\auser\\documents\\chad\\repos\\surfshop_mvc\\surfshop_mvc\\surfshop_mvc\\surfshop_mvc\\controllers\\rentalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3102A3F3-9B78-4E8A-8540-E629A9E22370}|SurfShop_MVC\\SurfShop_MVC.csproj|solutionrelative:surfshop_mvc\\controllers\\rentalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3102A3F3-9B78-4E8A-8540-E629A9E22370}|SurfShop_MVC\\SurfShop_MVC.csproj|c:\\users\\auser\\documents\\chad\\repos\\surfshop_mvc\\surfshop_mvc\\surfshop_mvc\\surfshop_mvc\\views\\rentals\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3102A3F3-9B78-4E8A-8540-E629A9E22370}|SurfShop_MVC\\SurfShop_MVC.csproj|solutionrelative:surfshop_mvc\\views\\rentals\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +34,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "SurfShop_MVC\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "SurfShop_MVC\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAFoAAAAkAAAA",
+              "DocumentIndex": 0,
+              "Title": "BookingSuccessful.cshtml",
+              "DocumentMoniker": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\Views\\Rentals\\BookingSuccessful.cshtml",
+              "RelativeDocumentMoniker": "SurfShop_MVC\\Views\\Rentals\\BookingSuccessful.cshtml",
+              "ToolTip": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\Views\\Rentals\\BookingSuccessful.cshtml",
+              "RelativeToolTip": "SurfShop_MVC\\Views\\Rentals\\BookingSuccessful.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-17T23:20:53.597Z",
+              "WhenOpened": "2024-05-19T10:01:09.309Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "SurfShop_MVC\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "SurfShop_MVC\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEIAAAAFAAAA",
+              "DocumentIndex": 2,
+              "Title": "RentalsController.cs",
+              "DocumentMoniker": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\Controllers\\RentalsController.cs",
+              "RelativeDocumentMoniker": "SurfShop_MVC\\Controllers\\RentalsController.cs",
+              "ToolTip": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\Controllers\\RentalsController.cs",
+              "RelativeToolTip": "SurfShop_MVC\\Controllers\\RentalsController.cs",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAuwIQAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T09:59:14.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\Views\\Rentals\\Create.cshtml",
+              "RelativeDocumentMoniker": "SurfShop_MVC\\Views\\Rentals\\Create.cshtml",
+              "ToolTip": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\Views\\Rentals\\Create.cshtml",
+              "RelativeToolTip": "SurfShop_MVC\\Views\\Rentals\\Create.cshtml",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAF0AAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-17T22:45:29.37Z",
+              "WhenOpened": "2024-05-19T09:52:42.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ViewOnly.cshtml",
+              "DocumentMoniker": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\Views\\Rentals\\ViewOnly.cshtml",
+              "RelativeDocumentMoniker": "SurfShop_MVC\\Views\\Rentals\\ViewOnly.cshtml",
+              "ToolTip": "C:\\Users\\auser\\Documents\\Chad\\Repos\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\SurfShop_MVC\\Views\\Rentals\\ViewOnly.cshtml",
+              "RelativeToolTip": "SurfShop_MVC\\Views\\Rentals\\ViewOnly.cshtml",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-19T09:49:43.583Z",
               "EditorCaption": ""
             }
           ]

@@ -108,5 +108,30 @@ namespace SurfShop_MVC.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult ViewOnly()
+        { 
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ViewOnly([Bind(Include = "Rental_ID,Customer_Name,Rental_Date,Return_Date,Price")] Rental rental)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Rentals.Add(rental);
+                db.SaveChanges();
+                return RedirectToAction("BookingSuccessful");
+            }
+
+            return View(rental);
+        }
+
+        public ActionResult BookingSuccessful()
+        {
+            return View();
+        }
+
     }
 }
